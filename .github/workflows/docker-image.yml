@@ -1,0 +1,30 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    -
+        name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+    - uses: actions/checkout@v3
+    - name: Build and Push the Docker image
+      run: |
+        cd material-react-app
+        docker build . --tag dyannary/pad-lab3:${{ github.sha }}
+        docker tag dyannary/pad-lab3:${{ github.sha }} dyannary/pad-lab3:latest
+        docker push dyannary/pad-lab3:${{ github.sha }}
+        docker push dyannary/pad-lab3:latest
