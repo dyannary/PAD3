@@ -29,10 +29,6 @@ jobs:
         docker push dyannary/pad-lab3:${{ github.sha }}
         docker push dyannary/pad-lab3:latest
 
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy to server
-    steps:
     - name: SSH command executions
       uses: appleboy/ssh-action@v1.0.0
       with:
@@ -40,7 +36,6 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_KEY }}
         script: |
-          cat ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username dyannary --password-stdin
           docker pull dyannary/pad-lab3:latest
           docker-compose up -d
     
