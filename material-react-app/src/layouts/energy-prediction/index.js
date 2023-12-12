@@ -151,7 +151,7 @@ const options =  {
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                color="dark"
+                color="success"
                 icon = "SolarPowerIcon"
                 title="Bookings"
                 count={281}
@@ -170,7 +170,7 @@ const options =  {
                 title="Today's Users"
                 count="2,300"
                 percentage={{
-                  color: "success",
+                  color: "dark",
                   amount: "+3%",
                   label: "than last month",
                 }}
