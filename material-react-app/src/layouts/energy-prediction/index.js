@@ -75,30 +75,6 @@ const energyPrediction = () => {
   const [temp, setTemp] = useState(0);
   const [hum, setHum] = useState(0);
 
-  const data = [
-    [
-"Courses",
-"Mathematics",
-"English",
-"Chemistry",
-"Physics",
-"Biology",
-"Average"
-    ],
-    ["Sam", 18, 10, 12, 16, 5, 12.2],
-    ["Jessica", 13, 11, 5, 18, 2, 9.8],
-    ["Suka", 15, 11, 7, 18, 9, 10],
-    ["Isaac", 19, 11, 6, 8, 5, 9.8],
-    ["Dee", 12, 11, 9, 16, 6, 10.8]
-];
-const options =  {
-  "title": "Test score in a classroom between 5 students",
-  "vAxis": { "title": "Grade" },
-  "hAxis": { "title": "Students" },
-  "seriesType": "bars",
-  "series": { "5": { "type": "line" } }
-       };
-
   const tempTopic = 'agrobot/sensors/temperature/sensor-1';
   const humTopic = 'agrobot/sensors/temperature/sensor-2';
 
@@ -283,7 +259,7 @@ const options =  {
             <Grid item xs={12} md={12} lg={12}>
               <MDBox mb={3}>
                 <ReportsLineChart
-                  color="info"
+                  color="dark"
                   title="Statistics"
                   description={
                     <>
