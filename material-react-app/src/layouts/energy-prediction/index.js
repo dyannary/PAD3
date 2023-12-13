@@ -269,15 +269,8 @@ const energyPrediction = () => {
                   date="updated 4 min ago"
                   chart={messages}
                 />
-                {/* <Chart
-                  chartType="ScatterChart"
-                  data={client}
-                  width = "100%"
-                  height= "400px"
-                /> */}
               </MDBox>
             </Grid>
-
           </Grid>
         </MDBox>
       </MDBox>
