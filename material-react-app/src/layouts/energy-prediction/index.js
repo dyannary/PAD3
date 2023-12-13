@@ -220,7 +220,6 @@ const energyPrediction = () => {
                 Load Data
               </MDButton>
             </MDBox>
-
             <MDBox mb={1.5}>
               <MDButton variant="gradient" color="info" fullWidth type="submit">
                 Set Data
@@ -238,11 +237,8 @@ const energyPrediction = () => {
                   onChange={changeHandler}
                 />
               </MDBox>
-
             </MDBox>
-
           </Grid>
-
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <MDTypography > MQTT status : {connectStatus}</MDTypography>
@@ -255,7 +251,6 @@ const energyPrediction = () => {
         </Grid>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-
             <Grid item xs={12} md={12} lg={12}>
               <MDBox mb={3}>
                 <ReportsLineChart
