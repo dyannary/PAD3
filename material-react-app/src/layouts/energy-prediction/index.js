@@ -146,7 +146,7 @@ const energyPrediction = () => {
                 title="Today's Users"
                 count="2,300"
                 percentage={{
-                  color: "dark",
+                  color: "success",
                   amount: "+3%",
                   label: "than last month",
                 }}
